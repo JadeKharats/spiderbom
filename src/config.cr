@@ -2,6 +2,7 @@
 require "action-controller"
 require "active-model"
 require "kilt"
+require "json"
 require "./constants"
 
 # Application code

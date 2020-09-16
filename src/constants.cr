@@ -1,5 +1,6 @@
 require "action-controller/logger"
 require "secrets-env"
+require "oauth2"
 
 module App
   NAME    = "BOM"
