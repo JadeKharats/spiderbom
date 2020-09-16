@@ -2,7 +2,7 @@ require "action-controller/logger"
 require "secrets-env"
 
 module App
-  NAME    = "Spider-Gazelle"
+  NAME    = "BOM"
   VERSION = {{ `shards version "#{__DIR__}"`.chomp.stringify.downcase }}
 
   Log         = ::Log.for(NAME)

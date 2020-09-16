@@ -8,6 +8,8 @@ abstract class Application < ActionController::Base
   before_action :set_request_id
   before_action :set_date_header
 
+  layout "layout/main.ecr"
+
   # This makes it simple to match client requests with server side logs.
   # When building microservices this ID should be propagated to upstream services.
   def set_request_id
