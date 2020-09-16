@@ -20,11 +20,11 @@ module App
   COOKIE_SESSION_KEY    = ENV["COOKIE_SESSION_KEY"]? || "_spider_gazelle_"
   COOKIE_SESSION_SECRET = ENV["COOKIE_SESSION_SECRET"]? || "4f74c0b358d5bab4000dd3c75465dc2c"
 
-  OAUTH_CLIENT_ID = ENV["OAUTH_CLIENT_ID"]? || "client_id"
+  OAUTH_CLIENT_ID     = ENV["OAUTH_CLIENT_ID"]? || "client_id"
   OAUTH_CLIENT_SECRET = ENV["OAUTH_CLIENT_SECRET"]? || "client_secret"
-  OAUTH_REDIRECT_URI = ENV["OAUTH_REDIRECT_URI"]? || "http://localhost:3000/auth/callback"
-  OAUTH_GITLAB_URI = ENV["OAUTH_GITLAB_URI"]? || "gitlab.com"
-  OAUTH_CLIENT = OAuth2::Client.new(App::OAUTH_GITLAB_URI, App::OAUTH_CLIENT_ID, App::OAUTH_CLIENT_SECRET,
+  OAUTH_REDIRECT_URI  = ENV["OAUTH_REDIRECT_URI"]? || "http://localhost:3000/auth/callback"
+  OAUTH_GITLAB_URI    = ENV["OAUTH_GITLAB_URI"]? || "gitlab.com"
+  OAUTH_CLIENT        = OAuth2::Client.new(App::OAUTH_GITLAB_URI, App::OAUTH_CLIENT_ID, App::OAUTH_CLIENT_SECRET,
     redirect_uri: App::OAUTH_REDIRECT_URI, authorize_uri: "/oauth/authorize", token_uri: "/oauth/token")
 
   def self.running_in_production?

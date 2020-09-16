@@ -12,5 +12,4 @@ class Auth < Application
     welcome_text = "Hello #{user.infos.name}"
     render html: template("welcome.ecr")
   end
-
 end

@@ -5,7 +5,7 @@ class UserInfos
   property email : String
   property avatar_url : String
 
-  def initialize()
+  def initialize
     @name = "Undefined name"
     @email = "Undefined email"
     @avatar_url = "Undefined avatar_url"
