@@ -10,6 +10,7 @@ require "./constants"
 require "./controllers/application"
 require "./controllers/*"
 require "./models/*"
+require "./models/gitlab/*"
 
 # Server required after application controllers
 require "action-controller/server"

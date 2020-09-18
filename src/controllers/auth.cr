@@ -8,7 +8,7 @@ class Auth < Application
   get "/callback" do
     authorization_code = params["code"]
     access_token = App::OAUTH_CLIENT.get_access_token_using_authorization_code(authorization_code)
-    usertoken = UserToken.new (access_token)
+    usertoken = Gitlab::UserToken.new (access_token)
     welcome_text = "Hello #{usertoken.user.name}"
     render html: template("welcome.ecr")
   end
