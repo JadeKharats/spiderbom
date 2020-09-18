@@ -17,6 +17,13 @@ dependencies:
   kilt:
     github: jeromegn/kilt
 
+  granite:
+    github: amberframework/granite
+  pg:
+    github: will/crystal-pg
+  micrate:
+    github: juanedi/micrate
+
 development_dependencies:
   ameba:
     github: veelenga/ameba

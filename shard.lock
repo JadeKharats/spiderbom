@@ -12,9 +12,17 @@ shards:
     git: https://github.com/veelenga/ameba.git
     version: 0.13.2
 
+  db:
+    git: https://github.com/crystal-lang/crystal-db.git
+    version: 0.9.0
+
   future:
     git: https://github.com/crystal-community/future.cr.git
     version: 0.1.0
+
+  granite:
+    git: https://github.com/amberframework/granite.git
+    version: 0.21.1
 
   habitat:
     git: https://github.com/luckyframework/habitat.git
@@ -35,6 +43,14 @@ shards:
   lucky_router:
     git: https://github.com/luckyframework/lucky_router.git
     version: 0.3.1
+
+  micrate:
+    git: https://github.com/juanedi/micrate.git
+    version: 0.8.0
+
+  pg:
+    git: https://github.com/will/crystal-pg.git
+    version: 0.21.1
 
   secrets-env:
     git: https://github.com/place-labs/secrets-env.git

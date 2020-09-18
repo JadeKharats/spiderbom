@@ -3,6 +3,7 @@ require "action-controller"
 require "active-model"
 require "kilt"
 require "json"
+require "granite/adapter/pg"
 require "./constants"
 
 # Application code
