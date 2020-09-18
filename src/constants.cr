@@ -20,6 +20,8 @@ module App
   COOKIE_SESSION_KEY    = ENV["COOKIE_SESSION_KEY"]? || "_spider_gazelle_"
   COOKIE_SESSION_SECRET = ENV["COOKIE_SESSION_SECRET"]? || "4f74c0b358d5bab4000dd3c75465dc2c"
 
+  DATABASE_URL = ENV["DATABASE_URL"]? || "postgres://postgres:postgres@localhost:5432/spiderbom"
+
   OAUTH_CLIENT_ID     = ENV["OAUTH_CLIENT_ID"]? || "client_id"
   OAUTH_CLIENT_SECRET = ENV["OAUTH_CLIENT_SECRET"]? || "client_secret"
   OAUTH_REDIRECT_URI  = ENV["OAUTH_REDIRECT_URI"]? || "http://localhost:3000/auth/callback"

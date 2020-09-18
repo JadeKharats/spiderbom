@@ -6,6 +6,8 @@ require "json"
 require "granite/adapter/pg"
 require "./constants"
 
+Granite::Connections << Granite::Adapter::Pg.new(name: "pg", url: App::DATABASE_URL)
+
 # Application code
 require "./controllers/application"
 require "./controllers/*"
