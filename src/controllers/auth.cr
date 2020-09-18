@@ -5,6 +5,12 @@ class Auth < Application
     redirect_to App::OAUTH_CLIENT.get_authorize_uri
   end
 
+  get "/logout" do
+    session.clear
+    Log.info { session.inspect }
+    redirect_to "/"
+  end
+
   get "/callback" do
     authorization_code = params["code"]
     access_token = App::OAUTH_CLIENT.get_access_token_using_authorization_code(authorization_code)

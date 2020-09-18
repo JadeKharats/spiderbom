@@ -4,8 +4,23 @@
     <title>BOM</title>
     <link rel="shortcut icon" href="favicon.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/bom.css">
 </head>
 <body>
-    <%= content %>
+  <div class="wrapper">
+    <header>BOM</header>
+    <aside>
+      <%- if current_user -%>
+        <%=current_user.not_nil!.name%>
+        <br>
+        <a href="/auth/logout"> Quitter </a>
+      <%- else -%>
+        <a href="/auth/login"> Se connecter </a>
+      <%- end -%>
+    </aside>
+    <main><%= content %></main>
+    <footer>Footer</footer>
+  </div>
+
 </body>
 </html>

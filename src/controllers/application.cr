@@ -26,6 +26,16 @@ abstract class Application < ActionController::Base
     # response.headers["X-Request-ID"] = request_id
   end
 
+  def current_user
+    @_current_user = User.new
+    Log.info { session.inspect}
+    if session["current_user_id"]?
+      @_current_user = User.find(session["current_user_id"])
+    else
+      @_current_user = nil
+    end
+  end
+
   def set_date_header
     response.headers["Date"] = HTTP.format_time(Time.utc)
   end
