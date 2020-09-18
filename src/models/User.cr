@@ -1,19 +1,15 @@
 class User
   include JSON::Serializable
 
-  property infos : UserInfos
-  property access_token : OAuth2::AccessToken
+  property id : Int64
+  property name : String
+  property email : String
+  property avatar_url : String
 
-  def initialize(access_token)
-    @access_token = access_token
-    @infos = UserInfos.new
-    get_oauth_infos
-  end
-
-  def get_oauth_infos
-    client = HTTP::Client.new(App::OAUTH_GITLAB_URI, tls: true)
-    @access_token.authenticate(client)
-    response = client.get "/api/v4/user"
-    @infos = UserInfos.from_json(response.body)
+  def initialize
+    @id = 0
+    @name = "Undefined name"
+    @email = "Undefined email"
+    @avatar_url = "Undefined avatar_url"
   end
 end
